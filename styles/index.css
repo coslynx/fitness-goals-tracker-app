@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary;
+  }
+
+  .card {
+    @apply bg-white shadow-md rounded-lg overflow-hidden;
+  }
+
+  .notification-success {
+    @apply bg-green-100 border-l-4 border-green-500 text-green-700 p-4;
+  }
+
+  .notification-error {
+    @apply bg-red-100 border-l-4 border-red-500 text-red-700 p-4;
+  }
+
+  .input-field {
+    @apply border border-gray-300 rounded-md p-2 w-full;
+  }
+
+  .header {
+    @apply bg-primary text-white p-4 flex items-center justify-between;
+  }
+
+  .footer {
+    @apply bg-gray-800 text-white p-4 text-center;
+  }
+
+  .progress-tracker {
+    @apply my-8 p-4 border border-gray-300 rounded-lg;
+  }
+
+  .goal-form {
+    @apply p-4 border border-gray-300 rounded-lg;
+  }
+
+  .user-info {
+    @apply p-4 border border-gray-300 rounded-lg mt-4;
+  }
+
+  .avatar {
+    @apply w-16 h-16 rounded-full border-2 border-white;
+  }
+}
+
+@layer utilities {
+  .bg-primary {
+    background-color: theme('colors.primary');
+  }
+
+  .bg-secondary {
+    background-color: theme('colors.secondary');
+  }
+
+  .text-accent {
+    color: theme('colors.accent');
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    @apply flex-col items-start;
+  }
+
+  .footer {
+    @apply text-sm;
+  }
+}
